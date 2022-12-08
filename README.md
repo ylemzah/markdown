@@ -11,17 +11,20 @@ are told how many characters are in common between your guess and the chosen wor
 
 A pseudo code for this algorithm would be :
 
-`potential_list = words_universe`
-`attempts <- 10`
-`score <-0`
-`while attempts > 0 do`
-`    guess random word from potential_list   ` 
-`    score <- score(word,secret_word)  `
-`    if score = 10 do `
-`       break  `
-`    else do  `
-`      potential_list <- words such that score(words,guess)=score `
-`      attempts <- attempts - 1 `
+```
+potential_list = words_universe
+attempts <- 10
+score <-0
+while attempts > 0 do
+    guess random word from potential_list    
+    score <- score(word,secret_word)  
+    if score = 10 do 
+       break  
+    else do  
+      potential_list <- words such that score(words,guess)=score 
+      attempts <- attempts - 1
+``` 
+
       
 
 
