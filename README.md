@@ -11,7 +11,6 @@ are told how many characters are in common between your guess and the chosen wor
 
 A pseudo code for this algorithm would be :
 
-```
 >potential_list = words_universe
 >attempts <- 10
 >score <-0
@@ -24,7 +23,6 @@ A pseudo code for this algorithm would be :
 >>    else do  
 >>>      potential_list <- words such that score(words,guess)=score 
 >>>      attempts <- attempts - 1
-``` 
 
 >while not convergence:
 >
