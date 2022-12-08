@@ -4,9 +4,26 @@ are told how many characters are in common between your guess and the chosen wor
 
 ## A first approach 
 + My first approach was :
-+ 1 - Initialises a list of potential words with the whole word universe
-+ 2 - pick a random word from the list of potential words and compute its distance from the secret word. Here the distance is meant as the number of common words between the guess and the secret word.
-+ 3 - update the potential words lists by only keeping the words at the same distance as our current guess.
++ 1_ Initialises a list of potential words with the whole word universe
++ 2_ pick a random word from the list of potential words and compute its score from the secret word. Here the score is meant as the number of common words between the guess and the secret word.
++ 3_ update the potential words lists by only keeping the words at the same distance as our current guess.
 + We repeat step 2 & 3 until we guess the secret word or we run out of guesses.
 
-	`code let's get the win`
+A pseudo code for this algorithm would be :
+
+`potential_list = words_universe`
+`attempts <- 10`
+`score <-0`
+`while attempts > 0 do`
+`    guess random word from potential_list   ` 
+`    score <- score(word,secret_word)  `
+`    if score = 10 do `
+`       break  `
+`    else do  `
+`      potential_list <- words such that score(words,guess)=score `
+`      attempts <- attempts - 1 `
+      
+
+
+
+
